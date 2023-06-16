@@ -1,0 +1,39 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <COMReference Include="{b5893b58-701e-4110-9871-1da14cf9c1dc}">
+      <WrapperTool>tlbimp</WrapperTool>
+      <VersionMinor>2</VersionMinor>
+      <VersionMajor>14</VersionMajor>
+      <Guid>b5893b58-701e-4110-9871-1da14cf9c1dc</Guid>
+    </COMReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="GdPicture.NET.14">
+      <HintPath>..\..\..\..\..\..\..\GdPicture\Redist\GdPicture.NET (.NET Framework 4.5)\GdPicture.NET.14.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+</Project>
