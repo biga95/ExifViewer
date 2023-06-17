@@ -38,7 +38,8 @@ namespace ExifViewer
             textBox1.Visible = false;
             countBack90 = 0;
             countForward90 = 0;
-            
+          
+          
             OpenFileDialog open = new OpenFileDialog();
             // image filters  
             open.Filter = "Image Files(*.jpg; *.jpeg; *.gif; *.bmp)|*.jpg; *.jpeg; *.gif; *.bmp";
@@ -86,9 +87,12 @@ namespace ExifViewer
                 {
                     MessageBox.Show("The image can't be loaded. Status: " + oGdPictureImaging.GetStat().ToString(), "Metadata Example", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-                
+
+                //mostro i pixel dell'immagine ridotta
+                labelPixel.Text = "Pixel Resize: " + pictureBoxImage.Height + " x " + pictureBoxImage.Width;
+                labelPixel.Visible = true;
             }
-           
+
         }
 
         private void buttonRotate90Back_Click(object sender, EventArgs e)
@@ -145,12 +149,28 @@ namespace ExifViewer
 
             pictureBoxImage.Visible = true;
             textBox1.Visible = false;
+            labelPixel.Text = "Pixel Resize: " + pictureBoxImage.Height + " x " + pictureBoxImage.Width;
+            labelPixel.Visible = true;
         }
 
         private void buttonExif_Click(object sender, EventArgs e)
         {
             pictureBoxImage.Visible = false;
             textBox1.Visible = true;
+            labelPixel.Visible = false;
+        }
+
+
+        //per mostrare i pixel dell'immagine che ad ogni riduzione non superino i 512 pixel.
+        //nonostante quelli originali siano più grossi.
+        private void pictureBoxImage_Resize(object sender, EventArgs e)
+        {
+            if (pictureBoxImage.Visible)
+            {
+                labelPixel.Text = "Pixel Resize: " + pictureBoxImage.Height + " x " + pictureBoxImage.Width;
+                labelPixel.Visible = true;
+            }
+            
         }
     }
 }

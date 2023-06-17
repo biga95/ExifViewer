@@ -38,6 +38,7 @@ namespace ExifViewer
             this.buttonExif = new System.Windows.Forms.Button();
             this.pictureBoxImage = new System.Windows.Forms.PictureBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.labelPixel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImage)).BeginInit();
             this.SuspendLayout();
             // 
@@ -107,13 +108,14 @@ namespace ExifViewer
             this.pictureBoxImage.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBoxImage.Location = new System.Drawing.Point(28, 76);
+            this.pictureBoxImage.Location = new System.Drawing.Point(28, 110);
             this.pictureBoxImage.MaximumSize = new System.Drawing.Size(512, 512);
             this.pictureBoxImage.Name = "pictureBoxImage";
-            this.pictureBoxImage.Size = new System.Drawing.Size(512, 449);
+            this.pictureBoxImage.Size = new System.Drawing.Size(512, 438);
             this.pictureBoxImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBoxImage.TabIndex = 2;
             this.pictureBoxImage.TabStop = false;
+            this.pictureBoxImage.Resize += new System.EventHandler(this.pictureBoxImage_Resize);
             // 
             // textBox1
             // 
@@ -122,7 +124,7 @@ namespace ExifViewer
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Location = new System.Drawing.Point(81, 76);
+            this.textBox1.Location = new System.Drawing.Point(63, 110);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
@@ -130,11 +132,22 @@ namespace ExifViewer
             this.textBox1.TabIndex = 0;
             this.textBox1.Visible = false;
             // 
+            // labelPixel
+            // 
+            this.labelPixel.AutoSize = true;
+            this.labelPixel.Location = new System.Drawing.Point(28, 78);
+            this.labelPixel.Name = "labelPixel";
+            this.labelPixel.Size = new System.Drawing.Size(70, 15);
+            this.labelPixel.TabIndex = 13;
+            this.labelPixel.Text = "Pixel Resize:";
+            this.labelPixel.Visible = false;
+            // 
             // ExifViewer
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(626, 571);
+            this.Controls.Add(this.labelPixel);
             this.Controls.Add(this.pictureBoxImage);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.buttonExif);
@@ -164,6 +177,7 @@ namespace ExifViewer
         private System.Windows.Forms.Button buttonExif;
         private System.Windows.Forms.PictureBox pictureBoxImage;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label labelPixel;
     }
 }
 
