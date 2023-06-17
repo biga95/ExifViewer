@@ -107,11 +107,11 @@ namespace ExifViewer
             this.pictureBoxImage.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBoxImage.Location = new System.Drawing.Point(12, 86);
+            this.pictureBoxImage.Location = new System.Drawing.Point(28, 76);
             this.pictureBoxImage.MaximumSize = new System.Drawing.Size(512, 512);
             this.pictureBoxImage.Name = "pictureBoxImage";
-            this.pictureBoxImage.Size = new System.Drawing.Size(512, 453);
-            this.pictureBoxImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBoxImage.Size = new System.Drawing.Size(512, 449);
+            this.pictureBoxImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBoxImage.TabIndex = 2;
             this.pictureBoxImage.TabStop = false;
             // 
@@ -122,21 +122,19 @@ namespace ExifViewer
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Location = new System.Drawing.Point(12, 201);
+            this.textBox1.Location = new System.Drawing.Point(81, 76);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox1.Size = new System.Drawing.Size(520, 338);
+            this.textBox1.Size = new System.Drawing.Size(444, 449);
             this.textBox1.TabIndex = 0;
             this.textBox1.Visible = false;
             // 
             // ExifViewer
             // 
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoScroll = true;
-            this.AutoSize = true;
-            this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
-            this.ClientSize = new System.Drawing.Size(544, 564);
+            this.ClientSize = new System.Drawing.Size(626, 571);
             this.Controls.Add(this.pictureBoxImage);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.buttonExif);
@@ -145,7 +143,8 @@ namespace ExifViewer
             this.Controls.Add(this.buttonRotation90Right);
             this.Controls.Add(this.buttonRotate90Back);
             this.Controls.Add(this.buttonAdd);
-            this.MinimumSize = new System.Drawing.Size(50, 50);
+            this.MaximumSize = new System.Drawing.Size(800, 700);
+            this.MinimumSize = new System.Drawing.Size(550, 100);
             this.Name = "ExifViewer";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ExifViewer";

@@ -23,6 +23,7 @@ namespace ExifViewer
         public ExifViewer()
         {
             InitializeComponent();
+            textBox1.Visible = false;
             GdPicture14.LicenseManager oLicenseManager = new GdPicture14.LicenseManager();
             oLicenseManager.RegisterKEY("0471518396633296756441224");
         }
@@ -34,6 +35,7 @@ namespace ExifViewer
 
         private void buttonAdd_Click(object sender, EventArgs e)
         {
+            textBox1.Visible = false;
             countBack90 = 0;
             countForward90 = 0;
             
@@ -140,6 +142,7 @@ namespace ExifViewer
 
         private void buttonShowImage_Click(object sender, EventArgs e)
         {
+
             pictureBoxImage.Visible = true;
             textBox1.Visible = false;
         }
