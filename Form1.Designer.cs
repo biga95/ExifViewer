@@ -61,6 +61,7 @@ namespace ExifViewer
             this.buttonRotate90Back.Size = new System.Drawing.Size(47, 46);
             this.buttonRotate90Back.TabIndex = 7;
             this.buttonRotate90Back.UseVisualStyleBackColor = true;
+            this.buttonRotate90Back.Visible = false;
             this.buttonRotate90Back.Click += new System.EventHandler(this.buttonRotate90Back_Click);
             // 
             // buttonRotation90Right
@@ -71,6 +72,7 @@ namespace ExifViewer
             this.buttonRotation90Right.Size = new System.Drawing.Size(47, 46);
             this.buttonRotation90Right.TabIndex = 8;
             this.buttonRotation90Right.UseVisualStyleBackColor = true;
+            this.buttonRotation90Right.Visible = false;
             this.buttonRotation90Right.Click += new System.EventHandler(this.buttonRotation90Right_Click);
             // 
             // panel1
@@ -91,6 +93,7 @@ namespace ExifViewer
             this.buttonShowImage.TabIndex = 11;
             this.buttonShowImage.Text = "Show Image";
             this.buttonShowImage.UseVisualStyleBackColor = true;
+            this.buttonShowImage.Visible = false;
             this.buttonShowImage.Click += new System.EventHandler(this.buttonShowImage_Click);
             // 
             // buttonExif
@@ -101,6 +104,7 @@ namespace ExifViewer
             this.buttonExif.TabIndex = 12;
             this.buttonExif.Text = "EXIF DATA";
             this.buttonExif.UseVisualStyleBackColor = true;
+            this.buttonExif.Visible = false;
             this.buttonExif.Click += new System.EventHandler(this.buttonExif_Click);
             // 
             // pictureBoxImage

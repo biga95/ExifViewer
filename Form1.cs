@@ -45,7 +45,7 @@ namespace ExifViewer
             open.Filter = "Image Files(*.jpg; *.jpeg; *.gif; *.bmp)|*.jpg; *.jpeg; *.gif; *.bmp";
             if (open.ShowDialog() == DialogResult.OK)
             {
-                //carico immagine principale
+                //loading image
                 image = new Bitmap(open.FileName);
                 height = (int)(image.Height * 0.16);
                 width = (int)(image.Width * 0.16);
@@ -56,7 +56,7 @@ namespace ExifViewer
                 pictureBoxImage.SizeMode = PictureBoxSizeMode.StretchImage;
                 pictureBoxImage.Visible = true;
 
-                // Estraggo dati EXIF.
+                // Extracting EXIF Data.
                 GdPictureImaging oGdPictureImaging = new GdPictureImaging();
                 int ImageID = oGdPictureImaging.CreateGdPictureImageFromFile(open.FileName);
                 if (oGdPictureImaging.GetStat() == GdPictureStatus.OK)
@@ -88,11 +88,15 @@ namespace ExifViewer
                     MessageBox.Show("The image can't be loaded. Status: " + oGdPictureImaging.GetStat().ToString(), "Metadata Example", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
 
-                //mostro i pixel dell'immagine ridotta
+                //Show Pixel of image resized
                 labelPixel.Text = "Pixel Resize: " + pictureBoxImage.Height + " x " + pictureBoxImage.Width;
                 labelPixel.Visible = true;
             }
-
+            buttonRotation90Right.Visible = true;
+            buttonRotate90Back.Visible = true;
+            buttonShowImage.Visible = true;
+            buttonExif.Visible = true;
+            buttonAdd.Text = "Add New Image";
         }
 
         private void buttonRotate90Back_Click(object sender, EventArgs e)
@@ -103,7 +107,7 @@ namespace ExifViewer
             image.RotateFlip(RotateFlipType.Rotate270FlipNone);
 
 
-            //per la rotazione inverto altezza e larghezza.
+            //for rotation inverted height and width.
             if (countBack90%2==1 && countForward90%2==0)
                 pictureBoxImage.Size = new System.Drawing.Size(height,width);
             else if(countBack90 % 2 == 1 && countForward90 % 2 == 1)
@@ -161,8 +165,8 @@ namespace ExifViewer
         }
 
 
-        //per mostrare i pixel dell'immagine che ad ogni riduzione non superino i 512 pixel.
-        //nonostante quelli originali siano più grossi.
+        /*show the pixels of the image that at each reduction do not exceed 512 pixels.
+        although the original ones are bigger.*/
         private void pictureBoxImage_Resize(object sender, EventArgs e)
         {
             if (pictureBoxImage.Visible)
