@@ -31,5 +31,7 @@ The application allow you to:
 3. This image can reach a maximum size of 512 pixels, with the resizing of the window. 
 4. Rotate the image 90 degrees to the right or to the left using the two buttons at the top
 5. View the exif data of the image with the button "EXIF DATA".
-   
+
+![My Image](Resources/showimage.png)
+![My Image](Resources/exifdata.png)  
 
