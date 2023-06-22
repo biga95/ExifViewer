@@ -9,7 +9,7 @@ Clone this repository with:
 
 https://github.com/biga95/ExifViewer.git
 
-Usage for the user
+Usage for the user:
 
 Run the project ExifViewer.sln and click the play icon or open the ExifViewer.exe in the folder "bin".
 
@@ -21,4 +21,11 @@ GdPicture.NET SDK license (or the trial license of 60 days)
 
 install from:
 https://www.gdpicture.com/ 
+
+# Functionality:
+
+The application allow you to:
+
+1. ccc
+2. vvv
 
